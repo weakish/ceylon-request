@@ -15,6 +15,8 @@
    case (is Integer) {
        print("response: status ``result``");
    }
+
+   It also provides common request exceptions.
    ```"""
 license("0BSD")
 module io.github.weakish.request "0.0.0" {
