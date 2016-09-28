@@ -19,3 +19,7 @@ jar: build fat-jar
 
 js:
 	@ceylon compile-js
+
+# No `test-js` since `ceylon.interop.browser` is an untestable dynamic interface
+# See [#615] for more information.
+# [615]: https://github.com/ceylon/ceylon-sdk/issues/615
