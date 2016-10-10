@@ -8,8 +8,15 @@ shared class ConnectionError(shared String url, shared String reason)
 
 "Thrown if the HTTP request returned an unsuccessful status code.
  Generally 2xx are sucessful, but your application may have a different meaning of 'success'."
-shared class HttpError(shared Integer status, shared String url, shared String method = "GET")
-        extends RequestException("Got ``status`` when accessing ``url`` with ``method``") {}
+shared class HttpError(status, url, method = "GET")
+        extends RequestException("Got ``status`` when accessing ``url`` with ``method``") {
+    "Non sucess http status."
+    shared Integer status;
+    "HTTP Request url."
+    shared String url;
+    "HTTP Request method."
+    shared String method;
+}
 
 "Thrown if a request times out."
 shared class TimeoutError(shared String url, shared String method = "GET")
