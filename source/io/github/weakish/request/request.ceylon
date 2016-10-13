@@ -39,3 +39,26 @@ native("js") shared String|Integer get(String url) {
     }
 }
 
+"Default 404 handler."
+Nothing throw_404(String url) {
+    throw HttpError(404, url);
+}
+
+"Like [[get]], but throws customizable exception on 404, and HttpError for others."
+throws(`class HttpError`, "non sucesseful requests")
+suppressWarnings("expressionTypeNothing")
+shared String try_get(String url, Nothing(String) handle_404 = throw_404) {
+    switch (result = get(url))
+    case (is String) {
+        return result;
+    }
+    case (is Integer) {
+        switch (status = result)
+        case (404) {
+            return handle_404(url);
+        }
+        else {
+            throw HttpError(status, url);
+        }
+    }
+}
