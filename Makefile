@@ -12,11 +12,6 @@ run-test:
 
 test: build run-test
 
-fat-jar:
-	@ceylon fat-jar `ceylon version`
-
-jar: build fat-jar
-
 js:
 	@ceylon compile-js
 
