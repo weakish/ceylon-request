@@ -19,8 +19,9 @@
    It also provides common request exceptions.
    ```"""
 license("0BSD")
-module io.github.weakish.request "0.0.0" {
-    native("jvm") import ceylon.net "1.2.2";
+module io.github.weakish.request "0.0.2016" {
+    native("jvm") import ceylon.uri "1.3.0";
+    native("jvm") import ceylon.http.client "1.3.0";
     native("js") import ceylon.interop.browser "1.3.0";
     import ceylon.test "1.3.0";
 }

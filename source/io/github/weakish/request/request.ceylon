@@ -1,9 +1,10 @@
-import ceylon.net.uri {
+import ceylon.uri {
     Uri,
     parse
 }
-import ceylon.net.http.client {
-    Response
+import ceylon.http.client {
+    Response,
+    get_uri = get
 }
 import ceylon.interop.browser {
     XMLHttpRequest,
@@ -17,7 +18,7 @@ native shared String|Integer get(String url);
 
 native("jvm") shared String|Integer get(String url) {
     Uri uri = parse(url);
-    Response response = uri.get().execute();
+    Response response = get_uri(uri).execute();
     switch (status = response.status)
     case (200) { // OK
         return response.contents;
