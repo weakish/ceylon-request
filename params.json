@@ -1,0 +1,6 @@
+{
+  "name": "ceylon-request",
+  "tagline": "This module provides http client functions on JVM and JS.",
+  "body": "This module provides http client functions on JVM and JS.\r\n\r\nCurrently only support `GET`.\r\n\r\nDoc\r\n---\r\n\r\nSee <https://weakish.github.io/ceylon-request/api/>\r\n\r\nInstall\r\n-------\r\n\r\nDownload the car file at [Releases] and put it in ceylon module repository.\r\n\r\n[Releases]: https://github.com/weakish/ceylon-request/releases\r\n\r\nContribute\r\n----------\r\n\r\nSend pull requests at <https://github.com/weakish/ceylon-request>\r\n\r\nLicense\r\n-------\r\n\r\n0BSD\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
